@@ -2,6 +2,7 @@ package com.yinhk.currencysvc.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,7 +17,7 @@ import com.yinhk.currencysvc.service.client.HistoricalConverterClient;
 import com.yinhk.currencysvc.service.client.HistoricalRatesClient;
 import com.yinhk.currencysvc.service.client.LatestRatesClient;
 
-
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @Validated
 @RequestMapping("/")
